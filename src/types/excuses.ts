@@ -1,5 +1,5 @@
-export interface Excuse {
-  id: number;
-  message: string;
-  category?: string;
-}
+// export interface Excuse {
+//   id: number;
+//   message: string;
+//   category?: string;
+// }

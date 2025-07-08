@@ -1,4 +1,4 @@
-export const excuses = {
+export const excusesList = {
   직장: ["날씨가 좋아서", "우리집 고양이가 가지말라해서"],
   운동: [
     "속상한 일이 있어서 꼭 맛있는걸 먹어야만 했어요.",
