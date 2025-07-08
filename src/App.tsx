@@ -9,7 +9,7 @@ function App() {
         핑계 매니절 👀👍
       </h1>
       <div className="flex gap-2">
-        {["직장", "운동", "공부"].map((category) => (
+        {["직장", "운동", "공부", "약속"].map((category) => (
           <button
             type="button"
             key={category}
