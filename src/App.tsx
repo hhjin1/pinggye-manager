@@ -2,7 +2,10 @@ import { useState } from "react";
 import { excusesList } from "./data/excuseList";
 
 function App() {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState<
+    // "직장" | "운동" | "공부" | "약속" | ""
+    keyof typeof excusesList | ""
+  >("");
   const [excuse, setExcuse] = useState("");
 
   const createExcuse = () => {
@@ -19,7 +22,7 @@ function App() {
         핑계 매니절 👀👍
       </h1>
       <div className="flex flex-row gap-2">
-        {["직장", "운동", "공부", "약속"].map((category) => (
+        {(["직장", "운동", "공부", "약속"] as const).map((category) => (
           <button
             type="button"
             key={category}
@@ -43,7 +46,8 @@ function App() {
       >
         핑계 생성하기
       </button>
-      <p>"{excuse}"</p>
+      {excuse && <p>"{excuse}"</p>}
+      {/* 조건 && 보여줄 것 */}
     </div>
   );
 }
